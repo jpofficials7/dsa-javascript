@@ -82,3 +82,10 @@ arr2.splice(0, 2);
 console.log(arr2);
 
 arr2.forEach((element) => console.log(element));
+
+// Array Concatenation
+let arr3 = arr1.concat(arr2);
+console.log('Concatenated Array: ', arr3);
+
+// Convert an Array to String
+console.log(arr3.toString());
