@@ -89,3 +89,6 @@ console.log('Concatenated Array: ', arr3);
 
 // Convert an Array to String
 console.log(arr3.toString());
+
+// Check type of array
+console.log(typeof arr3);
