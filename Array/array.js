@@ -92,3 +92,7 @@ console.log(arr3.toString());
 
 // Check type of array
 console.log(typeof arr3);
+
+// Recognizing an Array
+console.log('Using Array.isArray method: ', Array.isArray(arr3));
+console.log('Using instance of method:', arr3 instanceof Array);
