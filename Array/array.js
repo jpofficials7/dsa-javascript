@@ -57,5 +57,28 @@ function findElement(array, element) {
   return -1;
 }
 
-const position = findElement(arr, 5);
-console.log('position', position);
+// const position = findElement(arr, 5);
+// console.log('position', position);
+
+const arr1 = new Array('HTML', 'CSS', 'Javascript', 'React');
+console.log(arr1);
+
+const arr2 = new Array(5);
+arr2[0] = 1;
+arr2[1] = 2;
+arr2[2] = 3;
+arr2[3] = 4;
+arr2[4] = 5;
+arr2[5] = 6;
+console.log(arr2);
+arr2.push(7);
+arr2.unshift(0);
+console.log(arr2);
+let lastElement = arr2.pop();
+console.log('Removed last Element:', lastElement);
+let firstElement = arr2.shift();
+console.log('Removed First Element:', firstElement);
+arr2.splice(0, 2);
+console.log(arr2);
+
+arr2.forEach((element) => console.log(element));
