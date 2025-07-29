@@ -9,7 +9,7 @@ function sumOfNaturalNumbers(n) {
 
 // console.log(sumOfNaturalNumbers(5));
 
-function sumOfNaturalNumbersRecursive(i, sum) {
+function sumOfNaturalNumbersParameterized(i, sum) {
   if (i < 1) {
     console.log(sum);
     return;
