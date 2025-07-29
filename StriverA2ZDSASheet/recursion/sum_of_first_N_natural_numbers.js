@@ -14,7 +14,16 @@ function sumOfNaturalNumbersParameterized(i, sum) {
     console.log(sum);
     return;
   }
-  sumOfNaturalNumbersRecursive(i - 1, sum + i);
+  sumOfNaturalNumbersParameterized(i - 1, sum + i);
 }
 
-sumOfNaturalNumbersRecursive(5, 0);
+// sumOfNaturalNumbersParameterized(5, 0);
+
+function sumOfNaturalNumbersFunctional(n) {
+  if (n === 0) {
+    return 0;
+  }
+  return n + sumOfNaturalNumbersFunctional(n - 1);
+}
+
+console.log(sumOfNaturalNumbersFunctional(5));
