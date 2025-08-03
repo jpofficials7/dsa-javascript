@@ -1,3 +1,7 @@
+/**
+ * Definition: It pushes the minimum element at the first
+ */
+
 function selectionSort(arr) {
   for (let i = 0; i < arr.length - 1; i++) {
     let min = i;
