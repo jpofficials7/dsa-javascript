@@ -1,4 +1,4 @@
-/**
+/*
  * Definition: It pushes the minimum element at the first
  */
 

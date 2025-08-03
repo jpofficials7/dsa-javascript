@@ -1,4 +1,4 @@
-/**
+/*
  * Definition: It pushes the maximum element at the last by adjacent swapping
  */
 
