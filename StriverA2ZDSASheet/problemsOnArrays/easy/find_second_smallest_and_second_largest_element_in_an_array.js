@@ -17,6 +17,7 @@ Explanation: Since there is only one element in the array, it is the largest and
  * 
  */
 
+//#region - Brute Force Approach
 /**
  * Solution 1: (Brute Force) [this approach only works if there are no duplicates]
 Intuition:
@@ -43,4 +44,42 @@ function getElements(arr) {
 const arr = [1, 2, 3, 4, 5, 6, 7];
 getElements(arr);
 
+//#endregion
 
+//#region - Better Approach
+/**
+ * Intuition:
+Even though we want to have just the second smallest and largest elements, we are still sorting the entire array for that and thus increasing the time complexity. Can we somehow try to not sort the array and still get our answer?
+
+Approach:
+Find the smallest and largest element in the array in a single traversal
+After this, we once again traverse the array and find an element that is just greater than the smallest element we just found.
+Similarly, we would find the largest element which is just smaller than the largest element we just found
+Indeed, this is our second smallest and second largest element.
+ */
+function getElements(arr) {
+  if (arr.length === 0 || arr.length === 1) {
+    console.log(-1 + ' ' + -1);
+    return;
+  }
+  let small = Infinity;
+  let second_small = Infinity;
+  let large = -Infinity;
+  let second_large = -Infinity;
+
+  for (let i = 0; i < arr.length; i++) {
+    small = Math.min(small, arr[i]);
+    large = Math.max(large, arr[i]);
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] < second_small && arr[i] !== small) second_small = arr[i];
+    if (arr[i] > second_large && arr[i] !== large) second_large = arr[i];
+  }
+  console.log('Second smallest is ' + second_small);
+  console.log('Second largest is ' + second_large);
+}
+
+getElements(arr);
+
+//#endregion
