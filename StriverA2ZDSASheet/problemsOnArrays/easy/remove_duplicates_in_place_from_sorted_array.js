@@ -31,8 +31,27 @@ function removeDuplicates(arr) {
   return uniqueArr.length;
 }
 
+// const arr = [1, 1, 2, 2, 2, 3, 3];
+// const k = removeDuplicates(arr);
+
+// console.log('The array after removing duplicate element is:');
+// for (let i = 0; i < k; i++) {
+//   console.log(arr[i]);
+// }
+
+function removeDuplicatesOptimal(arr) {
+  let i = 0;
+  for (let j = 1; j < arr.length; j++) {
+    if (arr[i] !== arr[j]) {
+      i++;
+      arr[i] = arr[j];
+    }
+  }
+  return i + 1;
+}
+
 const arr = [1, 1, 2, 2, 2, 3, 3];
-const k = removeDuplicates(arr);
+const k = removeDuplicatesOptimal(arr);
 
 console.log('The array after removing duplicate element is:');
 for (let i = 0; i < k; i++) {
