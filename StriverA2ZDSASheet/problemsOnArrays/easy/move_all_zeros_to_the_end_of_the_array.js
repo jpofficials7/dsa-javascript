@@ -26,7 +26,10 @@ console.log(moveAllZerosToEnd(arr));
  *
  * Steps:
  * 1. Finding the first 0 element
- * 2. Check the elements next to j if they are non zero
+ * 2. Check the elements next to j if they are non zero then swap it
+ *
+ * Time Complexity:  O(n)
+ * Space Complexity: O(1)
  */
 
 function moveAllZero(arr) {
