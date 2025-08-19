@@ -1,6 +1,8 @@
 // Union: The union of two arrays can be defined as the common and distinct elements in the two arrays.NOTE: Elements in the union should be in ascending order.
 
 // Optimal Approach: Here we are using 2 pointer approach i and j
+// TC: O(n1+n2)
+// SC: O(n1+n2)
 
 function findUnion(arr1, arr2) {
   let i = 0,
