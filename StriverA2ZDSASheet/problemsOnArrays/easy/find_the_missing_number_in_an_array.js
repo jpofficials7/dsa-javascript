@@ -10,6 +10,7 @@
 
 // Brute Force Approach
 
+
 function findMissing(arr) {
   for (let i = 1; i <= arr.length; i++) {
     flag = 0;
