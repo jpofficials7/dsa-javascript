@@ -29,5 +29,28 @@ function findSingleElementBruteForce(arr) {
   }
 }
 
-let arr = [1, 1, 2, 3, 3, 4, 4];
+let arr = [1, 2, 2, 3, 3, 4, 4];
 console.log(findSingleElementBruteForce(arr));
+
+// Better Approach: We are going to use hashing for this and for using the hashing we need to find the maximum element first. We need to hash array to be the maximum of array element.
+
+function findSingleElementBetter(arr) {
+  let maxi = arr[0];
+  let hash = [];
+  for (let i = 0; i < arr.length; i++) {
+    maxi = Math.max(maxi, arr[i]);
+    hash[maxi] = 0;
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    hash[arr[i]]++;
+  }
+
+  for (let i = 0; i < arr.length; i++) {
+    if (hash[arr[i]] == 1) {
+      return arr[i];
+    }
+  }
+}
+
+console.log(findSingleElementBetter(arr));
