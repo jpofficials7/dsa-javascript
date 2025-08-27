@@ -17,7 +17,7 @@
  */
 function findMissing(arr) {
   for (let i = 1; i <= n; i++) {
-    flag = 0;
+    let flag = 0;
     for (let j = 0; j < n - 1; j++) {
       if (arr[j] === i) {
         flag = 1;
