@@ -39,3 +39,19 @@ function longestSubArrayWithGivenSumK(arr, k) {
 let arr = [1, 2, 3, 1, 1, 1, 1, 4, 2, 3];
 let k = 3;
 console.log(longestSubArrayWithGivenSumK(arr, k));
+
+// Better Approach: For this we can figure out an observation, Here while calculating the sum only 1 new element is getting added so instead of calculating sum everytime just keep the sum and add the new element to it.
+
+function longestSubArrayWithGivenSumKBetter(arr, k) {
+  let len = 0;
+  for (let i = 0; i < arr.length; i++) {
+    let s = 0;
+    for (let j = i; j < arr.length; j++) {
+      s += arr[j];
+      if (s == k) len = Math.max(len, j - i + 1);
+    }
+  }
+  return len;
+}
+
+console.log(longestSubArrayWithGivenSumKBetter(arr, k));
