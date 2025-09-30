@@ -41,6 +41,7 @@ let k = 3;
 console.log(longestSubArrayWithGivenSumK(arr, k));
 
 // Better Approach: For this we can figure out an observation, Here while calculating the sum only 1 new element is getting added so instead of calculating sum everytime just keep the sum and add the new element to it.
+// Time Complexity: O(n2)
 
 function longestSubArrayWithGivenSumKBetter(arr, k) {
   let len = 0;
@@ -55,3 +56,5 @@ function longestSubArrayWithGivenSumKBetter(arr, k) {
 }
 
 console.log(longestSubArrayWithGivenSumKBetter(arr, k));
+
+// Optimal Approach: Here we are going to use hashing. If there exists a subarray with sum k as (.) as the last element.
