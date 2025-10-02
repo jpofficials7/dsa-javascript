@@ -24,6 +24,12 @@ Result: NO (for 1st variant)
 Explanation: There exist no such two numbers whose sum is equal to the target.
 */
 
+/**
+ * Brute Force Approach: Here we are using two pointer approach and for every element we are checking with every other element.
+ * Time Complexity: O(N^2) Since we are running two loops to check for every element with other every element.
+ *
+ *
+ */
 function twoSumBruteForce(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = 0; j < arr.length; j++) {
@@ -40,3 +46,22 @@ let arr = [2, 6, 5, 6, 11];
 let target = 8;
 const result = twoSumBruteForce(arr, target);
 console.log(result);
+
+/**
+ * Better Approach: Here we are making improvement on the brute force approach, here instead of checking each and every element with each and every element, we are going to check for the element next to current element since the elements before the current element are already checked in previous iteration.
+ *
+ * Time Complexity: This is slightly better than O(N^2) but it is still near by O(n^2)
+ */
+function twoSumBetter(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = i + 1; j < arr.length; j++) {
+      if (arr[i] + arr[j] === target) {
+        return { index1: i, index2: j };
+      }
+    }
+  }
+  return { index1: -1, index2: -1 };
+}
+
+const output = twoSumBetter(arr, target);
+console.log(output);
