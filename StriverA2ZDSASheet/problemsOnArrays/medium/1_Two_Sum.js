@@ -88,7 +88,8 @@ console.log(result2);
 
 /**
  * In this Approach we are going to use two pointer approach, This is a slightly better solution then better approach, this is a kind of greed approach if we will sort the array then we will apply greedy approach we will left pointer at the first element of array and a right pointer at the last element. These can work efficiently for the first varient because if want to get the index of both the elements then we need to store all the elements of the array in a map data structure before sorting the original array.
- *
+ * Time Complexity: O(n) for the while loop and another O(nlogn) for sorting so it is O(n)+O(nlogn)
+ * Space Complexity: O(1)
  */
 function twoSumBetterWithoutMap(arr, target) {
   let left = 0;
