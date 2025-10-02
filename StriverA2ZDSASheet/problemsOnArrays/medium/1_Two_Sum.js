@@ -48,11 +48,11 @@ const result = twoSumBruteForce(arr, target);
 console.log(result);
 
 /**
- * Better Approach: Here we are making improvement on the brute force approach, here instead of checking each and every element with each and every element, we are going to check for the element next to current element since the elements before the current element are already checked in previous iteration.
+ * Brute Force Better Approach: Here we are making improvement on the brute force approach, here instead of checking each and every element with each and every element, we are going to check for the element next to current element since the elements before the current element are already checked in previous iteration.
  *
  * Time Complexity: This is slightly better than O(N^2) but it is still near by O(n^2)
  */
-function twoSumBetter(arr, target) {
+function twoSumBruteForceBetter(arr, target) {
   for (let i = 0; i < arr.length; i++) {
     for (let j = i + 1; j < arr.length; j++) {
       if (arr[i] + arr[j] === target) {
@@ -63,5 +63,5 @@ function twoSumBetter(arr, target) {
   return { index1: -1, index2: -1 };
 }
 
-const output = twoSumBetter(arr, target);
+const output = twoSumBruteForceBetter(arr, target);
 console.log(output);
