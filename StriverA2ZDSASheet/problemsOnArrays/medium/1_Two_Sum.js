@@ -85,3 +85,22 @@ function twoSumBetter(arr, target) {
 
 const result2 = twoSumBetter(arr, target);
 console.log(result2);
+
+/**
+ * In this Approach we are going to use two pointer approach, This is a slightly better solution then better approach, this is a kind of greed approach if we will sort the array then we will apply greedy approach we will left pointer at the first element of array and a right pointer at the last element. These can work efficiently for the first varient because if want to get the index of both the elements then we need to store all the elements of the array in a map data structure before sorting the original array.
+ *
+ */
+function twoSumBetterWithoutMap(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+  arr.sort((a, b) => a - b);
+  while (left < right) {
+    let sum = arr[left] + arr[right];
+    if (sum === target) return 'YES';
+    else if (sum < target) left++;
+    else right--;
+  }
+  return 'NO';
+}
+const result3 = twoSumBetterWithoutMap(arr, target);
+console.log(result3);
