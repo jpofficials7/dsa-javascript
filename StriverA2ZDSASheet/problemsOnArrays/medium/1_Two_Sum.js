@@ -65,3 +65,23 @@ function twoSumBruteForceBetter(arr, target) {
 
 const output = twoSumBruteForceBetter(arr, target);
 console.log(output);
+
+/**
+ *  Better Approach: In the Better approach we are going to use hashing, we will store the elements inside a data structure like map and since we already have the target with us so using simple maths (currentElement + X) = target
+ * In the hash map we will store the element and index where element will be key and index will be value.
+ * Time Complexity: O(n* logN) depends on the time complexity of map
+ * Space Complexity: O(n) because we are dumping every element in a map
+ */
+function twoSumBetter(arr, target) {
+  let map = new Map();
+  for (let i = 0; i < arr.length; i++) {
+    let a = arr[i];
+    let b = target - a;
+    if (map.has(b)) return { index1: map.get(b), index2: i };
+    map.set(a, i);
+  }
+  return { index1: -1, index2: -1 };
+}
+
+const result2 = twoSumBetter(arr, target);
+console.log(result2);
